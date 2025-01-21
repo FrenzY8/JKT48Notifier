@@ -73,8 +73,8 @@ client.once('ready', async () => {
   client.user.setPresence({
     activities: [
       {
-        name: 'Welcoming new members!',
-        type: 'PLAYING',
+        name: 'member stream!',
+        type: 'WATCHING',
       },
     ],
     status: 'online',
