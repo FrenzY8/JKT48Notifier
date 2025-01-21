@@ -85,8 +85,8 @@ client.once('ready', async () => {
   for (const guildId in config.guilds) {
     const guildConfig = config.guilds[guildId];
 
-    if (guildConfig && guildConfig.welcomeChannel) {
-      const channel = client.channels.cache.get(guildConfig.welcomeChannel);
+    if (guildConfig && guildConfig.notifChannel) {
+      const channel = client.channels.cache.get(guildConfig.notifChannel);
 
       if (channel) {
         let previousStreamersIdn = {};
