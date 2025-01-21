@@ -7,7 +7,7 @@ const fs = require('fs');
 const BOT_TOKEN = 'BOT_TOKEN_HERE!';
 const url_idn = 'https://idnjkt48.vercel.app/api/jkt48-idn'; // My APi (free)
 const url_sr = 'https://idnjkt48.vercel.app/api/jkt48-sr'; // My APi (free)
-const configPath = './config.json'; // Server Config
+const configPath = './data/server.json'; // Server Config
 
 let config = {};
 if (fs.existsSync(configPath)) {
@@ -15,8 +15,10 @@ if (fs.existsSync(configPath)) {
 } else {
   fs.writeFileSync(configPath, JSON.stringify({ guilds: {} }, null, 2));
 }
+
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers] });
 const streamerMessages = {};
+
 const sendDiscordEmbed = async (channel, embed) => {
   try {
     const message = await channel.send({ embeds: [embed] });
