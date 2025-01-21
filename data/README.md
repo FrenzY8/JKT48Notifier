@@ -2,8 +2,8 @@
 ```json
 {
   "guilds": {
-    "873776246838943826": {
-      "welcomeChannel": "882569581485494272"
+    "SERVER_ID_0000000": {
+      "notifChannel": "CHANNEL_ID_0000000"
     }
   }
 }
